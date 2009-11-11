@@ -38,7 +38,7 @@ Ability for any type of portal into the information. "represent as an email thre
 
 A way for requests to navigate to these things, kind of like the way IP packets find their way on the internets now. Google might know a thing or two here. 
 
-History of change for each thing, ability to go back in time, wave-like. 
+History of change for each thing, ability to go back in time, wave-like, or couch-like, or git-like. 
 
 Established relationship types between things, ability to create new types. 
 
