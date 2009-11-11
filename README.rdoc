@@ -16,30 +16,47 @@ Good luck with that.
 
 The problem is that Real Life is not like the set of discontinuous information store that we build as we live it. In reality, it's a smooth whole, with everything connected. 
 
-How to solve? The challenge is to start thinking more like a human and less like a computer about these things. In the ideal world, I would have a data store (much like a brain) that contained all these bits of information connected to each other in a web.  Ownership of this would be by the individual. Stuff put in here would establish priority (for academic, copyright, and patent purposes), would bequeath to whomever the owner wants to bequeath it to, could be used to reliably sell and transfer ownership of information therein, and would If I tug at part of the web, I can see the stuff it's connected to without having to know the storage mode of the information (was that in my email? the box? my blog? twitter? voicemail?)
+How to solve? The challenge is to start thinking more like a human and less like a computer about these things. In the ideal world, I would have a data store (much like a brain, but not The Brain) that contained all these bits of information connected to each other in a web.  Ownership of this would be by the individual. Stuff put in here would establish priority for academic, copyright, and patent purposes, would bequeath to whomever the owner wants to bequeath it to, could be used to reliably sell and transfer ownership of information therein, and would If I tug at part of the web, I can see the stuff it's connected to without having to know the storage mode of the information (was that in my email? the box? my blog? twitter? voicemail?). Connections to things owned by other people (that recommendation on amazon) are allowed. 
 
 
-Why the hell bother? 
+=== Why the hell bother? 
 
 Mainly because I need a project, and I'm obsessed with this. 
 
 
-== Goals 
+== Realizing This Might Require...
 
 This isn't going to solve the problem. In fact, it will be a pretty embarrassingly lame attempt, but it might start to illuminate a way to represent things like this. The real thing would need a few qualities: 
 
 Uniquely identified 'things' that could be represented in any computer system, but which don't lose their identity. 
 
-Ability to have the things in any system while retaining the connections to other things. 
+Some kind of data store that works for things like this (pregel - like)
 
-A way for requests to navigate to these things, kind of like the way IP packets find their way on the internets now. 
+Ability to have the things in any system while retaining the connections to other things in other systems. 
 
-History of change for each thing.
+Ability for any type of portal into the information. "represent as an email thread", you might say. Or, "peruse this as a relational database (eh?)". The point: the 'real' information is in a layer beneath the representational layers, and it is logically contiguous. Someone will build a representational SQL layer over the top, but it won't change the underlying reality. 
 
-Established relationship types between things. 
+A way for requests to navigate to these things, kind of like the way IP packets find their way on the internets now. Google might know a thing or two here. 
 
-Ability to establish a personal information store (not physical, but a registry of the things I create) that is recognized and protected the same way that something like a corporate entity is protected, with individual rights clearly established for the information. 
+History of change for each thing, ability to go back in time, wave-like. 
+
+Established relationship types between things, ability to create new types. 
+
+Ability to establish a personal information store (not physical, but a registry of the things I create) that is recognized as property and protected the same way that something like a corporate entity is protected, with individual rights clearly established for the information, a system of laws protecting rights. Ability to collateralize the information. Ability to take the information with you from job to job (don't tell anyone I said that.)
 
 Universal timestamps (see priority, above). 
+
+Support for a marketplace, so that the economic benefit of each idea and bit of information in your store can be realized. You want my purchasing history for salty snacks? Show me the money, baby! Otherwise, hands off!
+
+== Goals for this project
+
+Provide an API for manipulating bodies of linked objects.  
+
+Find out what it is like to deal with objects linked this way. Play with representing them in different ways and on different platforms. 
+
+See if rails can really talk to couch db.
+
+Not to be a useful CRM-style system
+
 
 
