@@ -46,7 +46,9 @@ Ability to establish a personal information store (not physical, but a registry 
 
 Universal timestamps (see priority, above). 
 
-Support for a marketplace, so that the economic benefit of each idea and bit of information in your store can be realized. You want my purchasing history for salty snacks? Show me the money, baby! Otherwise, hands off!
+Support for a marketplace, so that the economic benefit of each idea and bit of information in your store can be realized. You want my purchasing history for salty snacks? Show me the money, baby! Otherwise, hands off my salty snack purchasing behavior data!
+
+A complete and sweeping cultural transformation, enabled by new technologies, in the understanding that information now owned by the corporations you do business with really ought to be owned by individuals, except that before this, we had no way of keeping track of it, so we assumed it was worthless. 
 
 == Goals for this project
 
@@ -56,7 +58,7 @@ Find out what it is like to deal with objects linked this way. Play with represe
 
 See if rails can really talk to couch db.
 
-Not to be a useful CRM-style system
+The goal isn't to create useful CRM-style system. Much as it may seem. 
 
 
 
