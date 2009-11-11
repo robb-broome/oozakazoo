@@ -48,7 +48,7 @@ Universal timestamps (see priority, above).
 
 Support for a marketplace, so that the economic benefit of each idea and bit of information in your store can be realized. You want my purchasing history for salty snacks? Show me the money, baby! Otherwise, hands off my salty snack purchasing behavior data!
 
-A complete and sweeping cultural transformation, enabled by new technologies, in the understanding that information now owned by the corporations you do business with really ought to be owned by individuals, except that before this, we had no way of keeping track of it, so we assumed it was worthless. 
+A complete and sweeping cultural transformation, enabled by new technologies, in the understanding that information now owned by the corporations you do business with really ought to be owned by individuals, except that before this we had no way of keeping track of it, so we assumed it was worthless. Refactoring micro-economic thinking. Etc. 
 
 == Goals for this project
 
