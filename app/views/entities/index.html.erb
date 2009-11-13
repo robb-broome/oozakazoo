@@ -1,8 +1,7 @@
 <%= flash[:notice] %>
 <% if !@entities.blank? %>
   <% for entity in @entities %>
-    <p><%=h entity.title %> - <%=h entity.content %></p>
-    <p>UUID:<%=entity.uuid%></p>
+    <p><%=h entity.title %> - <%=h entity.content %> UUID:<%=entity.uuid%></p>
   <% end %>
 <% else %>
   No entities

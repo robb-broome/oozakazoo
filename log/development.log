@@ -393,3 +393,452 @@ Migrating to CreateEntities (20091112223502)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (21.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE "entities" ("title" varchar(255), "content" text, "uuid" varchar(36), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("entities")[0m
+  [4;36;1mEntity Create (0.3ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 03:31:08', 'robb', '2009-11-13 03:31:08', 'stuff')[0m
+  [4;35;1mEntity Create (0.4ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 03:31:30', 'robb', '2009-11-13 03:31:30', 'stuff')[0m
+  [4;36;1mEntity Create (73.8ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 03:33:12', 'robb', '2009-11-13 03:33:12', 'stuff')[0m
+  [4;36;1mSQL (16.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (40.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (340.3ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (361.8ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;36;1mSQL (130.7ms)[0m   [0;1mCREATE TABLE `entities` (`title` varchar(255), `content` text, `uuid` varchar(36), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (25.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `entities`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (65.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `entity_test`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE DATABASE `entity_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (63.1ms)[0m   [0;1mCREATE TABLE `entities` (`title` varchar(255), `content` text, `uuid` varchar(36), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (184.6ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (103.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEntity Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.5ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:38:38', 'robb', '2009-11-13 03:38:38', 'stuff')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Create (0.2ms)[0m   [0;1mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:38:46', 'robb', '2009-11-13 03:38:46', 'stuff')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.2ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:38:47', 'robb', '2009-11-13 03:38:47', 'stuff')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Create (0.2ms)[0m   [0;1mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:38:48', 'robb', '2009-11-13 03:38:48', 'stuff')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.2ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:38:49', 'robb', '2009-11-13 03:38:49', 'stuff')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEntity Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:40:40', 'robb', '2009-11-13 03:40:40', 'stuff')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEntity Columns (26.0ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `content`) VALUES('2009-11-13 03:46:51', NULL, '2009-11-13 03:46:51', NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mEntity Columns (24.7ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 03:56:19', 'robb', '2009-11-13 03:56:19', '6551c7d5-3175-4a5a-8cf0-5bd17159861b', 'stuff')[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (153.3ms)[0m   [0mCREATE TABLE `entities` (`id` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (12.9ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (95.8ms)[0m   [0mCREATE TABLE `entities` (`id` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (33.4ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `entity_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `entity_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (90.5ms)[0m   [0;1mCREATE TABLE `entities` (`id` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (246.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (127.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (96.4ms)[0m   [0mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (37.3ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (12.4ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (123.5ms)[0m   [0mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (45.6ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (13.2ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (105.8ms)[0m   [0mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (20.1ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'index_entities_on_uuid'; check that column/key exists: DROP INDEX `index_entities_on_uuid` ON entities[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'index_entities_on_uuid'; check that column/key exists: DROP INDEX `index_entities_on_uuid` ON entities[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `entities`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091112223502'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (69.8ms)[0m   [0mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (346.5ms)[0m   [0;1mCREATE UNIQUE INDEX `index_entities_on_uuid` ON `entities` (`uuid`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `entities`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (145.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (421.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;35;1mSQL (58.9ms)[0m   [0mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (157.1ms)[0m   [0;1mCREATE UNIQUE INDEX `index_entities_on_uuid` ON `entities` (`uuid`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `entities`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `entities`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:11:41) [GET]
+  [4;35;1mEntity Load (0.4ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 142ms (View: 137, DB: 1) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 22:11:43) [GET]
+  [4;35;1mEntity Columns (46.5ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Rendering entities/new
+Completed in 61ms (View: 10, DB: 47) | 200 OK [http://localhost/entities/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 22:11:49) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"blah", "content"=>"blow"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.4ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 04:11:49', 'blah', '2009-11-13 04:11:49', 'ddafdfaf-9971-405b-9185-da057f70c280', 'blow')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/entities
+Completed in 19ms (DB: 5) | 302 Found [http://localhost/entities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:11:49) [GET]
+  [4;36;1mEntity Load (0.4ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;35;1mEntity Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 22:11:53) [GET]
+  [4;35;1mEntity Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Rendering entities/new
+Completed in 12ms (View: 6, DB: 2) | 200 OK [http://localhost/entities/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 22:11:57) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"big", "content"=>"small"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 04:11:57', 'big', '2009-11-13 04:11:57', '59ba1138-5f6a-415a-aa54-985a93f9237b', 'small')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/entities
+Completed in 18ms (DB: 4) | 302 Found [http://localhost/entities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:11:57) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;35;1mEntity Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 22:12:04) [GET]
+  [4;35;1mEntity Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Rendering entities/new
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://localhost/entities/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 22:12:10) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"little", "content"=>"big"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Columns (48.7ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 04:12:10', 'little', '2009-11-13 04:12:10', '3db8a401-6b94-425f-80af-0ee618b98c8c', 'big')[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/entities
+Completed in 85ms (DB: 70) | 302 Found [http://localhost/entities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:12:10) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;35;1mEntity Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Completed in 13ms (View: 3, DB: 3) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:12:40) [GET]
+  [4;35;1mEntity Load (1.1ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;36;1mEntity Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+Completed in 18ms (View: 6, DB: 6) | 200 OK [http://localhost/entities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:12:45) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;35;1mEntity Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Completed in 10ms (View: 2, DB: 3) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 22:12:47) [GET]
+  [4;35;1mEntity Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Rendering entities/new
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/entities/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 22:12:51) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"time", "content"=>"not"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Create (1.7ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 04:12:51', 'time', '2009-11-13 04:12:51', '2ad24f5b-5296-4c55-8677-0c932a3566df', 'not')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/entities
+Completed in 17ms (DB: 4) | 302 Found [http://localhost/entities]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 22:12:51) [GET]
+  [4;36;1mEntity Load (0.5ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+  [4;35;1mEntity Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `entities`[0m
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/entities]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `entities`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `entity_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `entity_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (280.4ms)[0m   [0;1mCREATE TABLE `entities` (`uuid` varchar(36), `title` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (153.2ms)[0m   [0mCREATE UNIQUE INDEX `index_entities_on_uuid` ON `entities` (`uuid`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (114.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091112223502')[0m
