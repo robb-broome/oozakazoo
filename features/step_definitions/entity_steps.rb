@@ -11,3 +11,7 @@ end
 Then /^I should have ([0-9]+) entity$/ do |count|
   Entity.count.should == count.to_i
 end
+
+Then /^I should see a UUID$/ do
+  response.should contain("UUID")
+end

@@ -2,6 +2,7 @@
 <% if !@entities.blank? %>
   <% for entity in @entities %>
     <p><%=h entity.title %> - <%=h entity.content %></p>
+    <p>UUID:<%=entity.uuid%></p>
   <% end %>
 <% else %>
   No entities

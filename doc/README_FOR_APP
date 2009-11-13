@@ -1,2 +1,10 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+http://git.or.cz/gitwiki/GitSubmoduleTutorial
+
+~/work/rails/oozakazoo(master) $ git submodule add git://github.com/spectra/ruby-uuid.git lib/uuid
+Initialized empty Git repository in /Users/robb/work/rails/oozakazoo/lib/uuid/.git/
+remote: Counting objects: 28, done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 28 (delta 8), reused 0 (delta 0)
+Receiving objects: 100% (28/28), 7.39 KiB, done.
+Resolving deltas: 100% (8/8), done.
+~/work/rails/oozakazoo(master) $ 

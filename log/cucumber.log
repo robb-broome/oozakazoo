@@ -492,3 +492,159 @@ Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:13:51) [GET]
 Rendering entities/index
 Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "entities" [0m
+  [4;36;1mEntity Create (0.4ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:36:38', 'Cat', '2009-11-13 02:36:38', NULL)[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:36:38', 'Dog', '2009-11-13 02:36:38', NULL)[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:36:38) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 18ms (View: 16, DB: 1) | 200 OK [http://www.example.com/entities]
+  [4;35;1mEntity Delete all (0.2ms)[0m   [0mDELETE FROM "entities" WHERE 1=1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:36:38) [GET]
+  [4;36;1mEntity Load (0.1ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:36:39) [GET]
+Rendering entities/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:36:39) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mEntity Create (0.2ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:36:39', 'Cat', '2009-11-13 02:36:39', 'This is a furry little cat!')[0m
+Redirected to http://www.example.com/entities
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:36:39) [GET]
+  [4;36;1mEntity Load (0.2ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+  [4;36;1mEntity Create (0.4ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:37:23', 'Cat', '2009-11-13 02:37:23', NULL)[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:37:23', 'Dog', '2009-11-13 02:37:23', NULL)[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:37:24) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 19ms (View: 17, DB: 1) | 200 OK [http://www.example.com/entities]
+  [4;35;1mEntity Delete all (0.2ms)[0m   [0mDELETE FROM "entities" WHERE 1=1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:37:24) [GET]
+  [4;36;1mEntity Load (0.1ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:37:24) [GET]
+Rendering entities/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:37:24) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mEntity Create (0.2ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:37:24', 'Cat', '2009-11-13 02:37:24', 'This is a furry little cat!')[0m
+Redirected to http://www.example.com/entities
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:37:24) [GET]
+  [4;36;1mEntity Load (0.2ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+  [4;36;1mEntity Create (0.4ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:38:13', 'Cat', '2009-11-13 02:38:13', NULL)[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:38:13', 'Dog', '2009-11-13 02:38:13', NULL)[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:38:13) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/entities]
+  [4;35;1mEntity Delete all (0.2ms)[0m   [0mDELETE FROM "entities" WHERE 1=1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:38:13) [GET]
+  [4;36;1mEntity Load (0.1ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:38:13) [GET]
+Rendering entities/new
+Completed in 27ms (View: 26, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:38:13) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mEntity Create (0.2ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:38:13', 'Cat', '2009-11-13 02:38:13', 'This is a furry little cat!')[0m
+Redirected to http://www.example.com/entities
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:38:13) [GET]
+  [4;36;1mEntity Load (0.2ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+  [4;36;1mEntity Create (0.4ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:39:36', 'Cat', '2009-11-13 02:39:36', NULL)[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:39:36', 'Dog', '2009-11-13 02:39:36', NULL)[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:39:36) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-12 20:39:37) [GET]
+  [4;35;1mEntity Delete all (0.2ms)[0m   [0mDELETE FROM "entities" WHERE 1=1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:39:37) [GET]
+  [4;36;1mEntity Load (0.1ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 75ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:39:37) [GET]
+Rendering entities/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:39:37) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mEntity Create (0.4ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:39:37', 'Cat', '2009-11-13 02:39:37', 'This is a furry little cat!')[0m
+Redirected to http://www.example.com/entities
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:39:37) [GET]
+  [4;36;1mEntity Load (0.2ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-12 20:39:37) [GET]

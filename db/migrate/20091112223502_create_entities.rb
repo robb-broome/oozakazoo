@@ -1,8 +1,9 @@
 class CreateEntities < ActiveRecord::Migration
   def self.up
-    create_table :entities do |t|
+    create_table :entities, :id => false do |t|
       t.string :title
       t.text :content
+      t.string :uuid, :limit => 36, :primary => true
 
       t.timestamps
     end

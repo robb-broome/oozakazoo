@@ -20,6 +20,7 @@ Feature: Manage Entities
     Then I should see "Entity Created"
     And I should see "Cat"
     And I should see "This is a furry little cat!"
+    And I should see a UUID
     And I should have 1 entity
   
   
