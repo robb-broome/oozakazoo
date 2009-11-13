@@ -757,3 +757,145 @@ Rendering entities/index
 Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
   [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `entities` [0m
   [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'entity_test.entities' doesn't exist: SHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (46.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Delete all (0.0ms)[0m   [0mMysql::Error: Table 'entity_test.entities' doesn't exist: DELETE FROM `entities` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mEntity Create (0.3ms)[0m   [0;1mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 13:41:32', 'Cat', '2009-11-13 13:41:32', 'f7ddbb8c-8a7a-4b5e-a8fd-6f21c83f6b15', NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 13:41:32', 'Dog', '2009-11-13 13:41:32', 'e6aa3c46-4e9d-4e5f-82b3-f8aaf5c84821', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 07:41:32) [GET]
+  [4;35;1mEntity Load (0.2ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 29ms (View: 27, DB: 2) | 200 OK [http://www.example.com/entities]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Delete all (0.1ms)[0m   [0;1mDELETE FROM `entities` [0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 07:41:32) [GET]
+  [4;35;1mEntity Load (0.1ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 1) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-13 07:41:32) [GET]
+Rendering entities/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-13 07:41:32) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 13:41:32', 'Cat', '2009-11-13 13:41:32', '94dcc5ab-4cb5-4a5f-aefa-a5cb4acb48a0', 'This is a furry little cat!')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entities
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 07:41:32) [GET]
+  [4;35;1mEntity Load (0.1ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `entities` [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Columns (19.9ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEntity Delete all (0.1ms)[0m   [0mDELETE FROM `entities` [0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 08:06:23) [GET]
+  [4;36;1mEntity Load (0.1ms)[0m   [0;1mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 61ms (View: 59, DB: 21) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-13 08:06:23) [GET]
+Rendering entities/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-13 08:06:23) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-11-13 08:06:23) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `entities`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mEntity Create (0.3ms)[0m   [0;1mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 14:06:42', 'Cat', '2009-11-13 14:06:42', '8f0ee2de-3ea9-4454-9d40-86f60c8a7771', NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 14:06:42', 'Dog', '2009-11-13 14:06:42', '6ffbe707-6479-4254-bda9-ea4209590b12', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 08:06:42) [GET]
+  [4;35;1mEntity Load (0.2ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 6ms (View: 4, DB: 2) | 200 OK [http://www.example.com/entities]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEntity Delete all (0.1ms)[0m   [0;1mDELETE FROM `entities` [0m
+REQUESTING PAGE: GET /entities with {} and HTTP headers {}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 08:06:42) [GET]
+  [4;35;1mEntity Load (0.1ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 1) | 200 OK [http://www.example.com/entities]
+REQUESTING PAGE: GET /entities/new with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-13 08:06:42) [GET]
+Rendering entities/new
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/entities/new]
+REQUESTING PAGE: POST /entities with {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}} and HTTP headers {"HTTP_REFERER"=>"/entities/new"}
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-13 08:06:42) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"Cat", "content"=>"This is a furry little cat!"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEntity Create (0.1ms)[0m   [0mINSERT INTO `entities` (`created_at`, `title`, `updated_at`, `uuid`, `content`) VALUES('2009-11-13 14:06:42', 'Cat', '2009-11-13 14:06:42', 'a0c0c98c-6641-4d54-865d-32ee839abf93', 'This is a furry little cat!')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entities
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/entities]
+REQUESTING PAGE: GET http://www.example.com/entities with {} and HTTP headers {"HTTP_REFERER"=>"/entities"}
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-13 08:06:42) [GET]
+  [4;35;1mEntity Load (0.1ms)[0m   [0mSELECT * FROM `entities` [0m
+Rendering entities/index
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/entities]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `entities` [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m

@@ -193,7 +193,9 @@ alias :create_v1 :create
 def parse obj
 str = obj.to_s.sub %r/\Aurn:uuid:/, ''
 str.gsub! %r/[^0-9A-Fa-f]/, ''
-raw = str[0..31].lines.to_a.pack 'H*'
+# raw = str[0..31].lines.to_a.pack 'H*'
+# lines not supported before ruby 1.8.7, and that's not there on heroku
+raw = str[0..31].split(/\n/).pack 'H*'
 ret = new raw
 ret.freeze
 ret
