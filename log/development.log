@@ -1,0 +1,247 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEntities (20091112223502)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "entities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091112223502')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("entities")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("entities")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "entities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091112223502')[0m
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 19:58:19) [GET]
+  [4;36;1mEntity Load (0.4ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 66ms (View: 62, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 19:58:21) [GET]
+Rendering entities/new
+Completed in 83ms (View: 80, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 19:58:29) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"new entity", "content"=>"content for new"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:01:43) [GET]
+Rendering entities/new
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:01:51) [GET]
+  [4;35;1mEntity Load (0.4ms)[0m   [0mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:01:53) [GET]
+Rendering entities/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:01:57) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>";alkdjfl;", "content"=>";lakjdf;lkjasd;f"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:02:08) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:02:08) [GET]
+  [4;35;1mEntity Load (0.3ms)[0m   [0mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:02:23) [GET]
+Rendering entities/new
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:02:31) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"ads;flj;adlsfj;", "content"=>";lkjads;flkjas;dfl"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:04:03) [GET]
+  [4;36;1mEntity Load (0.3ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:04:05) [GET]
+Rendering entities/new
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:04:19) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"kasdfl;k", "content"=>"a;lkdsjf;lk"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:14:08) [GET]
+  [4;36;1mEntity Load (0.4ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:14:10) [GET]
+Rendering entities/new
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:14:14) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"cat", "content"=>"dog"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Create (19.2ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:14:14', 'cat', '2009-11-13 02:14:14', 'dog')[0m
+Redirected to http://localhost:3000/entities
+Completed in 27ms (DB: 19) | 302 Found [http://localhost/entities]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:14:14) [GET]
+  [4;36;1mEntity Load (0.4ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:14:17) [GET]
+Rendering entities/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:14:22) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"mouse", "content"=>"lion"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;35;1mEntity Create (0.3ms)[0m   [0mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:14:22', 'mouse', '2009-11-13 02:14:22', 'lion')[0m
+Redirected to http://localhost:3000/entities
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/entities]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:14:22) [GET]
+  [4;36;1mEntity Load (0.5ms)[0m   [0;1mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:14:33) [GET]
+  [4;35;1mEntity Load (0.5ms)[0m   [0mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 76ms (View: 73, DB: 0) | 200 OK [http://localhost/entities]
+
+
+Processing EntitiesController#new (for 127.0.0.1 at 2009-11-12 20:14:36) [GET]
+Rendering entities/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/entities/new]
+
+
+Processing EntitiesController#create (for 127.0.0.1 at 2009-11-12 20:14:41) [POST]
+  Parameters: {"commit"=>"Create", "entity"=>{"title"=>"pig", "content"=>"blanket"}, "authenticity_token"=>"/A3mOwaZK4VWCdG69B2iis3T8FF7h8JU/DrTfUj9i1A="}
+  [4;36;1mEntity Create (0.3ms)[0m   [0;1mINSERT INTO "entities" ("created_at", "title", "updated_at", "content") VALUES('2009-11-13 02:14:41', 'pig', '2009-11-13 02:14:41', 'blanket')[0m
+Redirected to http://localhost:3000/entities
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/entities]
+
+
+Processing EntitiesController#index (for 127.0.0.1 at 2009-11-12 20:14:41) [GET]
+  [4;35;1mEntity Load (0.6ms)[0m   [0mSELECT * FROM "entities" [0m
+Rendering entities/index
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/entities]

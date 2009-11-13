@@ -1,0 +1,11 @@
+<%= flash[:notice] %>
+<% if !@entities.blank? %>
+  <% for entity in @entities %>
+    <p><%=h entity.title %> - <%=h entity.content %></p>
+  <% end %>
+<% else %>
+  No entities
+<% end %>
+<p><%= link_to "Create Entity", new_entity_path %>
+
+
