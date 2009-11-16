@@ -15,3 +15,7 @@ end
 Then /^I should see a UUID$/ do
   response.should contain("UUID")
 end
+
+Given /^I am an existing user named (.+)$/ do |name|
+  Entity.create!(:title => name, :type =>  USER_TYPE )
+end
