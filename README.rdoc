@@ -60,5 +60,10 @@ See if rails can really talk to couch db.
 
 The goal isn't to create useful CRM-style system. Much as it may seem. 
 
+== Architectures 
 
+Entities are nodes
 
+Links between entities are edges
+
+Edges have types to define the relationship in question. 

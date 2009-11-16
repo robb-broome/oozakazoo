@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091116033347) do
+ActiveRecord::Schema.define(:version => 20091116045728) do
+
+  create_table "edges", :id => false, :force => true do |t|
+    t.string   "type",       :limit => 36
+    t.string   "end1",       :limit => 36
+    t.string   "end2",       :limit => 36
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "edges", ["end1", "end2", "type"], :name => "edge_idx1", :unique => true
+  add_index "edges", ["end2", "end1", "type"], :name => "edge_idx2", :unique => true
 
   create_table "entities", :id => false, :force => true do |t|
     t.string   "uuid",             :limit => 36

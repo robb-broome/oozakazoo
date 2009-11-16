@@ -5,16 +5,18 @@ Feature: Existing User creates and manages entities
 
   
   Scenario: Entity List
-    Given I am an existing user named "robb"
+    Given the catalog is set up 
+    And I am an existing user named "robb" 
     And I have entities titled Cat, Dog 
     When I go to the list of entities
     Then I should see "Cat"
-    And "Cat" should be linked to user "robb"
+    And "Cat" should be linked to user entity "robb"
     And I should see "Dog"
-    And "Dog" should be linked to user "robb"
+    And "Dog" should be linked to user entity "robb"
   
   Scenario: Create Valid Entity
     Given I have no entities
+    And the catalog is set up 
     And I am on the list of entities
     And I am an existing user named  "robb"
     When I follow "Create Entity"
@@ -25,7 +27,7 @@ Feature: Existing User creates and manages entities
     And I should see "Cat"
     And I should see "This is a furry little cat!"
     And I should see a UUID
-    And I should have 1 entity
+    And I should see the catalog listed plus 2 other entities
   
   
   

@@ -19,3 +19,18 @@ end
 Given /^I am an existing user named (.+)$/ do |name|
   Entity.create!(:title => name, :type =>  USER_TYPE )
 end
+
+Given /^the catalog is set up$/ do
+  pending
+end
+
+Then /^"([^\"]*)" should be linked to ([^\"]*) entity "([^\"]*)"$/ do |entity1, entity_type, entity_2|
+  pending
+end
+
+Then /^I should see the catalog listed plus ([0-9]+) other entities$/ do |num_entities|
+  catalog_entities = Entity.count(:entity_type_uuid = CATALOG_TYPE)
+  all_entities = Entity.count 
+  non_cat_entities = all_entities - catalog_entities 
+  non_cat_entities.should == num_entities
+end
