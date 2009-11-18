@@ -2,7 +2,7 @@
 <table>
   <% for entity in @entities %>
   <tr>
-    <td><%=h entity.title %></td><td><%=h entity.content %></td><td> UUID:<%=entity.uuid%></td>
+    <td><%=h entity.title %></td><td><%=h entity.content %></td><td> UUID:<%=entity.uuid%></td><td><%=entity.entity_type_uuid%></td>
     </tr>
   <% end %>
   </table>

@@ -1,10 +1,10 @@
-include UUIDHelper
 class EntitiesController < ApplicationController
   def index
     @entities = Entity.all
   end
   
   def new
+    @owners = Entity.find_all(:entity_type_uuid => entity_type)
     @entity = Entity.new
   end 
   
