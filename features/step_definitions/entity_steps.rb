@@ -17,7 +17,7 @@ Then /^I should see a UUID$/ do
 end
 
 Given /^I am an existing user named (.+)$/ do |name|
-  Entity.create!(:title => name, :type =>  USER_TYPE )
+  Entity.create!(:title => name, :type =>  entity_types[:user] )
 end
 
 Given /^the catalog is set up$/ do
@@ -29,7 +29,7 @@ Then /^"([^\"]*)" should be linked to ([^\"]*) entity "([^\"]*)"$/ do |entity1, 
 end
 
 Then /^I should see the catalog listed plus ([0-9]+) other entities$/ do |num_entities|
-  catalog_entities = Entity.count(:entity_type_uuid = CATALOG_TYPE)
+  catalog_entities = Entity.count(:entity_type_uuid = entity_types[:catalog])
   all_entities = Entity.count 
   non_cat_entities = all_entities - catalog_entities 
   non_cat_entities.should == num_entities

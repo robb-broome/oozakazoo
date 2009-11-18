@@ -6,5 +6,9 @@
     <%= f.label :content, "Content" %><br/>
     <%= f.text_field :content %>
   </p>
+  <p>
+    <%= f.label :entity_type_uuid, "Type" %><br/>
+    <%= f.select :entity_type_uuid, entity_types %>
+  </p>
   <%= f.submit "Create", :disable_with => 'Thanks...' %>
 <% end -%>

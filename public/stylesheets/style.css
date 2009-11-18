@@ -1,0 +1,21 @@
+.flash {
+display: block;
+position:relative;
+bottom:0px;
+width:100%;
+z-index:1003;
+padding:4px;
+font-size:12px;
+text-align:center;
+display: inline;
+}
+
+.flash-notice {
+    color:#ccc;
+    background-color:green;
+}
+
+.flash-error {
+    color:#ccc;
+    background-color:#000;
+} 

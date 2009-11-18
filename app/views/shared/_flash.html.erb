@@ -1,0 +1,9 @@
+<% for name in flash_names %>
+<% if flash[name] %>
+<%= "<div id=\"flash-#{name}\" class=\"flash flash-#{name}\">#{flash[name]}</div>" %>
+<%= content_tag :script, :type => "text/javascript" do -%>
+       setTimeout("new Effect.Fade('flash-<%= name %>');", 15000);
+   <% end %>
+
+<% end %>
+<% end %>

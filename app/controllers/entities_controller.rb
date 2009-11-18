@@ -1,3 +1,4 @@
+include UUIDHelper
 class EntitiesController < ApplicationController
   def index
     @entities = Entity.all
@@ -8,9 +9,8 @@ class EntitiesController < ApplicationController
   end 
   
   def create
-    @entity = Entity.create(params[:entity])
-    
-    flash[:notice] = "Entity Created"
+    @entity = Entity.create!(params[:entity])
+    notice "Entity Created #{@entity.title} #{@entity.content}"
     redirect_to entities_path
   end
 
