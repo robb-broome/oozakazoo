@@ -10,5 +10,9 @@
     <%= f.label :entity_type_uuid, "Type" %><br/>
     <%= f.select :entity_type_uuid, entity_types %>
   </p>
+  <p>
+    <%= f.label :owner_uuid, "Owner" %><br/>
+    <%= f.select :owner_uuid, @owners %>
+  </p>
   <%= f.submit "Create", :disable_with => 'Thanks...' %>
 <% end -%>
