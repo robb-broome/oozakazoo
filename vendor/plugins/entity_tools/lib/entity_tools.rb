@@ -11,6 +11,8 @@ module Ent
         :catalog_item => "62653b25-f78e-485d-a1c3-a0d52cd8f3f4",
         # A catalog is a list of items related in some way.
         :catalog => "a9750bc0-1ac5-4055-bfe4-89c03d1a5f93",
+        # special objet type - system catalog
+        :system_catalog => "e6bb5d52-1eb4-4055-b968-ec1b007db058", 
         # defines a time interval
         :interval => "b0e3ce6c-5153-4d59-a2a5-4a21fe638832", 
         # defines a permission level
