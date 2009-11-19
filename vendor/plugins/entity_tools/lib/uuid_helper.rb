@@ -7,6 +7,7 @@ module UUIDHelper
 
   # Global item types
   # TODO: how to look these up in a catalog?
+  include Ent::Globals
   def before_create()
     puts 'before creating!'
     self.uuid = UUID.create_random.to_s
