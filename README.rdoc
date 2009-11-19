@@ -73,6 +73,30 @@ Links between entities are edges
 
 Edges have types to define the relationship in question. (this is kind of difficult, unless it is kept very, very simple, like 'contains' and 'defines')
 
+Everything has to share some system types - system catalog (special entity). In there, find catalog entries for the basic following entities (all type=system_catalog):
+
+These are 'catalog_entry' type (so, type definers), belonging to system catalog. 
+- people
+- time interval 
+- catalog
+- catalog item
+- permission
+- link
+- document
+- 
+
+Permissions are edge objects. How does the permission attach? 
+One way is to have special edge types for each, but then you might need several to define a permission. 
+# TODO: permission hex structure like playlist, where one permission describes the whole thing for
+:grants_view =>  "7c175d76-3dc4-4756-b5a5-d497a0675771",
+:grants_edit => "a54c8164-989e-4d58-86d0-450254161770", 
+:grants_add => ?? 
+:grants_delete =>  "e7f2cc42-fa61-4b59-9ecf-2bbba4a62ec0",
+
+Who can create an object belonging to a catalog? Someone with 'edit' on the system catalog object. You can 
+
+
+
 Authentication is needed, maybe oauth?
 http://openwebfoundation.org/2009/11/introducing-the-open-web-foundation-agreement.html
 

@@ -1,6 +1,7 @@
 # EntityTools
 module Ent
   module Globals
+    # these define the system catalog - may be better to seed these, or create a helper service to provide them. This could be used by the seed script
     def entity_types
       {
         :user => "9bcc4de1-86b1-425d-85c4-9f921f72f0fc",

@@ -29,7 +29,7 @@ Then /^"([^\"]*)" should be linked to ([^\"]*) entity "([^\"]*)"$/ do |entity1, 
 end
 
 Then /^I should see the catalog listed plus ([0-9]+) other entities$/ do |num_entities|
-  catalog_entities = Entity.count(:entity_type_uuid = entity_types[:catalog])
+  catalog_entities = Entity.count(:entity_type_uuid = entity_typesent[:catalog])
   all_entities = Entity.count 
   non_cat_entities = all_entities - catalog_entities 
   non_cat_entities.should == num_entities

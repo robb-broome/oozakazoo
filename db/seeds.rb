@@ -16,8 +16,18 @@ people = Entity.create({:title => "people", :content => "the group of all people
 # users of the system 
 users = Entity.create({:title => "all users", :content => "the group of all users", :entity_type_uuid => entity_types[:catalog_item] })
 
+users.link_to_entity system_catalog
+
+# administrator of the system 
+administrator = Entity.create({:title => "sys", :content => "Grantor of the system catalog", :entity_type_uuid => entity_types[:user] })
+
+administrator.link_to_entity system_catalog
+
 # make the users object belong to the system catalog
 Edge.create(:edge_type => edge_types[:contains], :end1 => people.uuid, :end2 => system_catalog.uuid)
+
+Edge.create(:edge_type => edge_types[:contains], :end1 => administrator.uuid, :end2 => users.uuid)
+
 
 # # todo: repeat for def entity_types
 #   {
