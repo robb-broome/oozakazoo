@@ -1,10 +1,10 @@
 class Entity < ActiveRecord::Base
   set_primary_key "uuid"
   include UUIDHelper # before save trigger populates the primary key
-  
+  include Ent::Globals
   # TODO: Named scope for stuff like system objects
   # http://ryandaigle.com/articles/2008/3/24/what-s-new-in-edge-rails-has-finder-functionality
-  named_scope :system_catalog, :conditions => {:type => entity_types[:system_catalog]}
+  named_scope :system_catalog, :conditions => {:entity_type_uuid => entity_types[:system_catalog]}
   
   def related_entities
     edges = Edge.find(:all, :conditions => ["end1 = :uuid OR end2 = :uuid", {:uuid => self.uuid} ] ).collect {|edge| edge.end1 == self.uuid ? edge.end2 : edge.end1 }.uniq
