@@ -75,3 +75,6 @@ Edges have types to define the relationship in question. (this is kind of diffic
 
 Authentication is needed, maybe oauth?
 http://openwebfoundation.org/2009/11/introducing-the-open-web-foundation-agreement.html
+
+Declarative auth?
+http://media.railscasts.com/videos/188_declarative_authorization.mov
