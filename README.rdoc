@@ -48,7 +48,8 @@ Universal timestamps (see priority, above).
 
 Support for a marketplace, so that the economic benefit of each idea and bit of information in your store can be realized. You want my purchasing history for salty snacks? Show me the money, baby! Otherwise, hands off my salty snack purchasing behavior data!
 
-A complete and sweeping cultural transformation, enabled by new technologies, in the understanding that information now owned by the corporations you do business with really ought to be owned by individuals, except that before this we had no way of keeping track of it, so we assumed it was worthless. Refactoring micro-economic thinking. Etc. 
+A complete and sweeping cultural transformation, enabled by new technologies, in the understanding that information now owned by the corporations you do business with really ought to be owned by individuals, except that before this we had no way of keeping track of it, so we assumed it was worthless. Refactoring micro-economic thinking. Etc. Whatever. 
+
 
 == Goals for this project
 
@@ -66,4 +67,7 @@ Entities are nodes
 
 Links between entities are edges
 
-Edges have types to define the relationship in question. 
+Edges have types to define the relationship in question. (this is kind of difficult, unless it is kept very, very simple, like 'contains' and 'defines')
+
+Authentication is needed, maybe oauth?
+http://openwebfoundation.org/2009/11/introducing-the-open-web-foundation-agreement.html
