@@ -16,7 +16,7 @@ class Entity < ActiveRecord::Base
     puts "linking to uuid #{to_uuid}"
     to_entity = Entity.find(to_uuid)
     puts "linking to entity #{to_entity.inspect}"
-    edge = Edges.create!(:type => edge_types[:grantor], :end1 => self.uuid, :end2 => uuid )
+    edge = Edge.create!(:type => edge_types[:grantor], :end1 => self.uuid, :end2 => uuid )
     puts "created edge #{edge.inspect}"
     return edge
   end 
