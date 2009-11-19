@@ -9,9 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091118225750) do
+ActiveRecord::Schema.define(:version => 20091116045728) do
 
   create_table "edges", :id => false, :force => true do |t|
+    t.string   "uuid",       :limit => 36
     t.string   "edge_type",  :limit => 36
     t.string   "end1",       :limit => 36
     t.string   "end2",       :limit => 36
@@ -21,17 +22,20 @@ ActiveRecord::Schema.define(:version => 20091118225750) do
 
   add_index "edges", ["end1", "end2", "edge_type"], :name => "edge_idx1", :unique => true
   add_index "edges", ["end2", "end1", "edge_type"], :name => "edge_idx2", :unique => true
+  add_index "edges", ["uuid"], :name => "index_edges_on_uuid", :unique => true
 
   create_table "entities", :id => false, :force => true do |t|
     t.string   "uuid",             :limit => 36
-    t.string   "title"
+    t.string   "entity_type_uuid", :limit => 36
+    t.string   "string",           :limit => 36
+    t.string   "title",            :limit => 256
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "entity_type_uuid", :limit => 36
   end
 
   add_index "entities", ["entity_type_uuid"], :name => "index_entities_on_entity_type_uuid"
+  add_index "entities", ["title"], :name => "index_entities_on_title"
   add_index "entities", ["uuid"], :name => "index_entities_on_uuid", :unique => true
 
 end
