@@ -55,11 +55,15 @@ A complete and sweeping cultural transformation, enabled by new technologies, in
 
 Provide an API for manipulating bodies of linked objects.  
 
-Find out what it is like to deal with objects linked this way. Play with representing them in different ways and on different platforms. 
+Find out what it is like to deal with objects linked this way. Play with representing them in different ways and on different platforms. Find the data structure that is most flexible. 
 
 See if rails can really talk to couch db.
 
+Find a edge-node database that rails can talk to. 
+
 The goal isn't to create useful CRM-style system. Much as it may seem. 
+
+Make a halfway decent UI for dealing with non-standard data structures. 
 
 == Architectures 
 
