@@ -11,11 +11,11 @@ include Ent::Globals
 
 # Owns all the defining objects. Always special. 
 cat_entry = {:title => "system catalog", :content => "the group of all system objects", :entity_type_uuid => SYSTEM_CATALOG_UUID, :uuid => SYSTEM_CATALOG_UUID}
-puts "cat entry is #{cat_entry}"
+# puts "cat entry is #{cat_entry}"
 system_catalog = Entity.new(cat_entry)
 system_catalog.save
 
-puts "system_catalog is #{system_catalog.inspect}"
+# puts "system_catalog is #{system_catalog.inspect}"
 # administrator of the system (needed?)
 administrator = Entity.create!({:title => "sys", :content => "Grantor of the system catalog", :entity_type_uuid => SYSTEM_OBJECT_UUID })
 
