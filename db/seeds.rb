@@ -16,7 +16,6 @@ system_catalog = Entity.new(cat_entry)
 system_catalog.save
 
 puts "system_catalog is #{system_catalog.inspect}"
-exit
 # administrator of the system (needed?)
 administrator = Entity.create!({:title => "sys", :content => "Grantor of the system catalog", :entity_type_uuid => SYSTEM_OBJECT_UUID })
 
