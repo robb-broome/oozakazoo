@@ -4,13 +4,15 @@ class EntitiesController < ApplicationController
   end
 
   def new
-    @owners = Entity.find(:all, :conditions => {:entity_type_uuid => entity_types[:user]}).collect {|owner| [owner.title, owner.uuid]}
-    puts "owners are #{@owners}"
+    @owners = Entity.find(:all, :conditions => {:entity_type_uuid => Entity.types[:user]}).collect {|owner| [owner.title, owner.uuid]}
     @entity = Entity.new
   end
 
+  def show
+    @entity = Entity.find(params[:id])
+  end 
+  
   def create
-    puts "params are #{params.inspect}"
     owner = params[:entity].delete :owner_uuid
     @entity = Entity.create!(params[:entity])
     if owner

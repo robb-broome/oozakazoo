@@ -1,0 +1,14 @@
+<% if !@edges.blank? %>
+  <table>
+    <th><td>link</td><td>type</td><td>from</td><td>to</td></th>
+    <% for edge in @edges %>
+      <tr>
+        <td><%=link_to "Edge", :action => "show",:id => edge.uuid  %></td><td><%=h edge.edge_type %></td><td> UUID:<%=edge.uuid%></td><td><%= edge.end1 %></td><td><%= edge.end2 %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  No edges
+<% end %>
+<p><%= link_to "Create edge", new_edge_path %>
+<p><%= link_to "List Entities", entities_path %>

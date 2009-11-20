@@ -1,0 +1,14 @@
+  <p>Title: <%= @entity.title %></p>
+  <p>Content: <%= @entity.content %></p>
+  <p>Type: <%= @entity.entity_type_uuid %></p>
+  
+  <p>Linked items: </p>
+  <ul>
+  <p><% for ent in @entity.related_entities %>
+      <li><%= ent.title %>
+    <% end %>
+    </ul>
+    
+    
+    
+    <p><%= link_to "index", :action => :index %>

@@ -6,6 +6,9 @@ module UUIDHelper
   # but it makes nice symmetry, since this would have the same tracking and versioning.
   include Ent::Globals
   def before_create()
-    self.uuid = UUID.create_random.to_s
+    puts "before the trigger, my uuid is #{self.uuid.inspect}"
+    if self.uuid.blank?
+      self.uuid ||= UUID.create_random.to_s
+    end 
   end
 end

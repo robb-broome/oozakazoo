@@ -8,7 +8,7 @@
   </p>
   <p>
     <%= f.label :entity_type_uuid, "Type" %><br/>
-    <%= f.select :entity_type_uuid, entity_types %>
+    <%= f.select :entity_type_uuid, Entity.types %>
   </p>
   <p>
     <%= f.label :owner_uuid, "Owner" %><br/>
