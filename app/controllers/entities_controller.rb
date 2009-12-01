@@ -1,4 +1,5 @@
 class EntitiesController < ApplicationController
+  before_filter :find_entity, :only => [:show, :delete]
   def index
     @entities = Entity.all
   end
@@ -9,7 +10,6 @@ class EntitiesController < ApplicationController
   end
 
   def show
-    @entity = Entity.find(params[:id])
   end 
   
   def create
@@ -23,4 +23,17 @@ class EntitiesController < ApplicationController
     notice "Entity Created #{@entity.title} #{@entity.content}"
     redirect_to entities_path
   end
+  
+  def delete
+    @entity.delete
+    notice "Entity Deleted #{@entity.title} #{@entity.content}"
+  end 
+  
+  private 
+  
+  def find_entity
+    @entity = Entity.find(params[:id])
+  end 
+    
+  
 end

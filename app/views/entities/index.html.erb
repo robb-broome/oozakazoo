@@ -1,8 +1,10 @@
 <% if !@entities.blank? %>
 <table>
   <% for entity in @entities %>
-  <tr>
-    <td><%=link_to entity.title, :action => "show",:id => entity.uuid  %></td><td><%=h entity.content %></td><td> UUID:<%=entity.uuid%></td><td><%=entity.entity_type_uuid%></td>
+  
+  <%= "<tr id=#{entity.uuid}>"%>
+    
+    <td><%=link_to entity.title, :action => "show",:id => entity.uuid  %><br><%= link_to_remote "delete", :url =>  {:action => :delete, :id => entity.uuid}, :complete => visual_effect(:highlight, entity.uuid) %></td><td><%=h entity.content %></td><td> UUID:<%=entity.uuid%></td><td><%=entity.entity_type_uuid%></td>
     </tr>
   <% end %>
   </table>

@@ -4,6 +4,8 @@ class Entity < ActiveRecord::Base
   # TODO: Named scope for stuff like system objects
   #  http://ryandaigle.com/articles/2008/3/24/what-s-new-in-edge-rails-has-finder-functionality
   # TODO: entity_types not visible here - ?
+  # has_many :inbound_links 
+  
   named_scope :system_catalog, :conditions => {:entity_type_uuid => SYSTEM_CATALOG_UUID }
   validates_presence_of [:title, :content]
 

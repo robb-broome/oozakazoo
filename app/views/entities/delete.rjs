@@ -1,0 +1,2 @@
+# page.replace_html @entity.uuid, "<b>Deleted!</b>"
+jquery_remove([@entity.uuid])
