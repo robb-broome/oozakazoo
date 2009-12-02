@@ -1,0 +1,27 @@
+test:
+  ttl: 604800
+  namespace: test
+  sessions: false
+  debug: false
+  servers: localhost:11211
+
+development:
+  ttl: 604800
+  namespace: dev
+  sessions: false
+  debug: false
+  servers: localhost:11211
+  
+production:
+  ttl: 604800
+  namespace: prod
+  sessions: false
+  debug: false
+  servers: localhost:11211
+
+cucumber:
+  ttl: 604800
+  namespace: cuc
+  sessions: false
+  debug: false
+  servers: localhost:11211

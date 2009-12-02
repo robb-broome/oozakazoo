@@ -15,6 +15,8 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+# Use a different cache store in production
+config.cache_store = :mem_cache_store
 
 # config.gem "rspec", :lib => false, :version => ">=1.2.2"
 # config.gem "rspec-rails", :lib => false, :version => ">=1.2.2"

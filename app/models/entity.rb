@@ -8,6 +8,9 @@ class Entity < ActiveRecord::Base
   
   named_scope :system_catalog, :conditions => {:entity_type_uuid => SYSTEM_CATALOG_UUID }
   validates_presence_of [:title, :content]
+  
+  # version 1.0
+  # index :uuid
 
   def related_entities
     edges = Edge.find(:all, :conditions => ["end1 = :uuid OR end2 = :uuid", {:uuid => self.uuid} ] ).collect {|edge| edge.end1 == self.uuid ? edge.end2 : edge.end1 }.uniq

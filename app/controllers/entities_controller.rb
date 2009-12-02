@@ -11,6 +11,22 @@ class EntitiesController < ApplicationController
 
   def show
   end 
+
+  def create_linked
+    # create an entity, and save (blank)
+    owner = params[:entity].delete :owner_uuid
+    linked_from = params[:entity].delete :linked_from
+    
+    @entity = Entity.create!(:title => 'enter a title', :description => 'enter a descr')
+    @edge = Edge.create!(:end1 => linked_from, :end2 => @entity.uuid)
+    if owner
+      @entity.owner_uuid = owner
+      @entity.save
+
+    end
+    notice "Entity Created #{@entity.title} #{@entity.content} and linked to a new entity "
+    redirect_to entity_path, :params => {:id => @entity.uuid}
+  end  
   
   def create
     owner = params[:entity].delete :owner_uuid
