@@ -6,6 +6,17 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+ASYNC_RUNNERS = {:resque => 'resque', :workling => 'workling'}
+ASYNC_RUNNER = :resque
+
+# it is necessary to start the starling runner like this if spawn is installed.
+Workling::Remote.dispatcher = Workling::Remote::Runners::StarlingRunner.new if ASYNC_RUNNER == ASYNC_RUNNERS[:starling]
+
+# start starling with
+    # sudo starling -d -p 22122
+    # script/workling_client start
+
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
@@ -19,6 +30,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  #
+  # Do not load unused async runners
+  config.gem -= (ASYNC_RUNNERS.delete { |k,v| k == ASYNC_RUNNER}).values
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
