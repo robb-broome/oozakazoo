@@ -1,4 +1,4 @@
-class Entity < ActiveRecord::Base
+class BaseEntity < ActiveRecord::Base
   set_primary_key "uuid"
   include UUIDHelper # before save trigger populates the primary key
   # TODO: Named scope for stuff like system objects

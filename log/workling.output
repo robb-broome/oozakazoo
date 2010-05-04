@@ -1,0 +1,51 @@
+=> Loading Rails...
+/Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35:in `gem': wrong number of arguments (0 for 1) (ArgumentError)
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35
+	from /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/initializer.rb:111:in `run'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:20
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/listen.rb:3
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:257:in `start'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+	from script/workling_client:17
+=> Loading Rails...
+/Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35:in `gem': wrong number of arguments (0 for 1) (ArgumentError)
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35
+	from /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/initializer.rb:111:in `run'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:20
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/listen.rb:3
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:257:in `start'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+	from script/workling_client:17
+=> Loading Rails...
+/Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35:in `gem': wrong number of arguments (0 for 1) (ArgumentError)
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:35
+	from /Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/initializer.rb:111:in `run'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/../../../../config/environment.rb:20
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+	from /Users/robb/work/rails/oozakazoo/vendor/plugins/workling/script/listen.rb:3
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/application.rb:257:in `start'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+	from /Library/Ruby/Gems/1.8/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+	from script/workling_client:17

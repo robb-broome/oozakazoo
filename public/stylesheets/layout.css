@@ -1,0 +1,27 @@
+@import url("reset.css");
+body {
+	
+}
+h1{
+	margin:12px
+}
+h1 a{
+	width:198px;
+	height:30px;
+	display:block;
+}
+.content{
+	margin:5px;
+	padding:10px;
+}
+.content p{
+	margin:10px 0 10px 0;
+}
+
+.todo_list li{
+	display:block;
+	height:60px;
+	margin:6px 0 0 0;
+	line-height:60px;
+	padding:0 0 0 24px;
+}

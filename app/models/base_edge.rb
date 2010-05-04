@@ -1,5 +1,6 @@
-class Edge < ActiveRecord::Base
+class BaseEdge < ActiveRecord::Base
   set_primary_key "uuid"
+  set_table_name "edges"
   include UUIDHelper # before save trigger populates the primary key
 
   # TODO: define, or have in system catalog? 
