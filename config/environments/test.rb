@@ -9,6 +9,7 @@ config.cache_classes = true
 # Log error messages when you accidentally call methods on nil.
 config.whiny_nils = true
 
+# this is a change
 # Show full error reports and disable caching
 config.action_controller.consider_all_requests_local = true
 config.action_controller.perform_caching             = false
@@ -29,11 +30,7 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
-# config.gem "rspec", :lib => false, :version => ">=1.2.2"
-# config.gem "rspec-rails", :lib => false, :version => ">=1.2.2"
-# config.gem "webrat", :lib => false, :version => ">=0.4.3"
-# config.gem "cucumber", :lib => false, :version => ">=0.2.2"
-#
+
 # From ryan bates: http://railscasts.com/episodes/155-beginning-with-cucumber
 config.gem "rspec", :lib => false, :version => ">=1.3.0"
 config.gem "rspec-rails", :lib => false, :version => ">=1.3.2"
