@@ -1,0 +1,202 @@
+--- !ruby/object:Gem::Specification 
+name: gherkin
+version: !ruby/object:Gem::Version 
+  version: 1.0.26
+platform: java
+authors: 
+  - Mike Sassak
+  - Gregory Hnatiuk
+  - "Aslak Helles\xC3\xB8y"
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-05-08 00:00:00 -05:00
+default_executable: gherkin
+dependencies: 
+  - !ruby/object:Gem::Dependency 
+    name: trollop
+    type: :runtime
+    version_requirement: 
+    version_requirements: !ruby/object:Gem::Requirement 
+      requirements: 
+        - - ">="
+          - !ruby/object:Gem::Version 
+            version: "1.15"
+      version: 
+  - !ruby/object:Gem::Dependency 
+    name: rspec
+    type: :development
+    version_requirement: 
+    version_requirements: !ruby/object:Gem::Requirement 
+      requirements: 
+        - - ">="
+          - !ruby/object:Gem::Version 
+            version: 1.3.0
+      version: 
+  - !ruby/object:Gem::Dependency 
+    name: cucumber
+    type: :development
+    version_requirement: 
+    version_requirements: !ruby/object:Gem::Requirement 
+      requirements: 
+        - - ">="
+          - !ruby/object:Gem::Version 
+            version: 0.7.2
+      version: 
+description: A fast Gherkin lexer/parser based on the Ragel State Machine Compiler.
+email: cukes@googlegroups.com
+executables: 
+  - gherkin
+extensions: []
+
+extra_rdoc_files: 
+  - LICENSE
+  - README.rdoc
+files: 
+  - .gitattributes
+  - .gitignore
+  - .mailmap
+  - History.txt
+  - LICENSE
+  - README.rdoc
+  - Rakefile
+  - VERSION.yml
+  - bin/gherkin
+  - cucumber.yml
+  - features/feature_parser.feature
+  - features/native_lexer.feature
+  - features/parser_with_native_lexer.feature
+  - features/pretty_printer.feature
+  - features/step_definitions/gherkin_steps.rb
+  - features/step_definitions/pretty_formatter_steps.rb
+  - features/steps_parser.feature
+  - features/support/env.rb
+  - ikvm/.gitignore
+  - java/.gitignore
+  - java/src/main/java/gherkin/lexer/.gitignore
+  - java/src/main/resources/gherkin/.gitignore
+  - lib/.gitignore
+  - lib/gherkin.jar
+  - lib/gherkin.rb
+  - lib/gherkin/c_lexer.rb
+  - lib/gherkin/cli/main.rb
+  - lib/gherkin/formatter/argument.rb
+  - lib/gherkin/formatter/colors.rb
+  - lib/gherkin/formatter/monochrome_format.rb
+  - lib/gherkin/formatter/pretty_formatter.rb
+  - lib/gherkin/i18n.rb
+  - lib/gherkin/i18n.yml
+  - lib/gherkin/i18n_lexer.rb
+  - lib/gherkin/java_impl.rb
+  - lib/gherkin/parser/event.rb
+  - lib/gherkin/parser/filter_listener.rb
+  - lib/gherkin/parser/meta.txt
+  - lib/gherkin/parser/parser.rb
+  - lib/gherkin/parser/root.txt
+  - lib/gherkin/parser/steps.txt
+  - lib/gherkin/parser/tag_expression.rb
+  - lib/gherkin/rb_lexer.rb
+  - lib/gherkin/rb_lexer/.gitignore
+  - lib/gherkin/rb_lexer/README.rdoc
+  - lib/gherkin/rubify.rb
+  - lib/gherkin/tools.rb
+  - lib/gherkin/tools/files.rb
+  - lib/gherkin/tools/reformat.rb
+  - lib/gherkin/tools/stats.rb
+  - lib/gherkin/tools/stats_listener.rb
+  - ragel/i18n/.gitignore
+  - ragel/lexer.c.rl.erb
+  - ragel/lexer.java.rl.erb
+  - ragel/lexer.rb.rl.erb
+  - ragel/lexer_common.rl.erb
+  - spec/gherkin/c_lexer_spec.rb
+  - spec/gherkin/csharp_lexer_spec.rb
+  - spec/gherkin/fixtures/1.feature
+  - spec/gherkin/fixtures/comments_in_table.feature
+  - spec/gherkin/fixtures/complex.feature
+  - spec/gherkin/fixtures/dos_line_endings.feature
+  - spec/gherkin/fixtures/i18n_fr.feature
+  - spec/gherkin/fixtures/i18n_no.feature
+  - spec/gherkin/fixtures/i18n_zh-CN.feature
+  - spec/gherkin/fixtures/simple_with_comments.feature
+  - spec/gherkin/fixtures/simple_with_tags.feature
+  - spec/gherkin/fixtures/with_bom.feature
+  - spec/gherkin/formatter/argument_spec.rb
+  - spec/gherkin/formatter/colors_spec.rb
+  - spec/gherkin/formatter/pretty_formatter_spec.rb
+  - spec/gherkin/formatter/spaces.feature
+  - spec/gherkin/formatter/tabs.feature
+  - spec/gherkin/i18n_lexer_spec.rb
+  - spec/gherkin/i18n_spec.rb
+  - spec/gherkin/java_lexer_spec.rb
+  - spec/gherkin/parser/filter_listener_spec.rb
+  - spec/gherkin/parser/parser_spec.rb
+  - spec/gherkin/parser/tag_expression_spec.rb
+  - spec/gherkin/rb_lexer_spec.rb
+  - spec/gherkin/sexp_recorder.rb
+  - spec/gherkin/shared/lexer_spec.rb
+  - spec/gherkin/shared/py_string_spec.rb
+  - spec/gherkin/shared/row_spec.rb
+  - spec/gherkin/shared/tags_spec.rb
+  - spec/spec_helper.rb
+  - tasks/bench.rake
+  - tasks/bench/feature_builder.rb
+  - tasks/bench/generated/.gitignore
+  - tasks/bench/null_listener.rb
+  - tasks/compile.rake
+  - tasks/cucumber.rake
+  - tasks/gems.rake
+  - tasks/ikvm.rake
+  - tasks/ragel_task.rb
+  - tasks/rdoc.rake
+  - tasks/release.rake
+  - tasks/rspec.rake
+has_rdoc: true
+homepage: http://github.com/aslakhellesoy/gherkin
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+  - --charset=UTF-8
+require_paths: 
+  - lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 3
+summary: Fast Gherkin lexer/parser
+test_files: 
+  - spec/spec_helper.rb
+  - spec/gherkin/c_lexer_spec.rb
+  - spec/gherkin/csharp_lexer_spec.rb
+  - spec/gherkin/i18n_lexer_spec.rb
+  - spec/gherkin/i18n_spec.rb
+  - spec/gherkin/java_lexer_spec.rb
+  - spec/gherkin/rb_lexer_spec.rb
+  - spec/gherkin/sexp_recorder.rb
+  - spec/gherkin/formatter/argument_spec.rb
+  - spec/gherkin/formatter/colors_spec.rb
+  - spec/gherkin/formatter/pretty_formatter_spec.rb
+  - spec/gherkin/parser/filter_listener_spec.rb
+  - spec/gherkin/parser/parser_spec.rb
+  - spec/gherkin/parser/tag_expression_spec.rb
+  - spec/gherkin/shared/lexer_spec.rb
+  - spec/gherkin/shared/py_string_spec.rb
+  - spec/gherkin/shared/row_spec.rb
+  - spec/gherkin/shared/tags_spec.rb
+

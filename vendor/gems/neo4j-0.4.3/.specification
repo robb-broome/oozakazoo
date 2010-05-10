@@ -1,0 +1,210 @@
+--- !ruby/object:Gem::Specification 
+name: neo4j
+version: !ruby/object:Gem::Version 
+  version: 0.4.3
+platform: ruby
+authors: 
+  - Andreas Ronge
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-04-09 00:00:00 -05:00
+default_executable: 
+dependencies: []
+
+description: A graph database for JRuby
+email: andreas.ronge@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+  - README.rdoc
+files: 
+  - LICENSE
+  - CHANGELOG
+  - README.rdoc
+  - Rakefile
+  - lib/rest.rb
+  - lib/neo4j/node.rb
+  - lib/neo4j/neo.rb
+  - lib/neo4j/jars.rb
+  - lib/neo4j/version.rb
+  - lib/neo4j/search_result.rb
+  - lib/neo4j/relationships/traversal_position.rb
+  - lib/neo4j/relationships/relationship_dsl.rb
+  - lib/neo4j/relationships/decl_relationship_dsl.rb
+  - lib/neo4j/relationships/has_n.rb
+  - lib/neo4j/relationships/node_traverser.rb
+  - lib/neo4j/relationships/has_list.rb
+  - lib/neo4j/relationships/wrappers.rb
+  - lib/neo4j/batch_inserter.rb
+  - lib/neo4j/transaction.rb
+  - lib/neo4j/mixins/property_class_methods.rb
+  - lib/neo4j/mixins/migration_mixin.rb
+  - lib/neo4j/mixins/java_list_mixin.rb
+  - lib/neo4j/mixins/node_mixin.rb
+  - lib/neo4j/mixins/relationship_mixin.rb
+  - lib/neo4j/mixins/java_node_mixin.rb
+  - lib/neo4j/mixins/java_relationship_mixin.rb
+  - lib/neo4j/mixins/rel_class_methods.rb
+  - lib/neo4j/mixins/java_property_mixin.rb
+  - lib/neo4j/config.rb
+  - lib/neo4j/extensions/rest.rb
+  - lib/neo4j/extensions/tx_tracker.rb
+  - lib/neo4j/extensions/activemodel.rb
+  - lib/neo4j/extensions/graph_algo/neo4j-graph-algo-0.3.jar
+  - lib/neo4j/extensions/graph_algo/all_simple_paths.rb
+  - lib/neo4j/extensions/aggregate/ext/node_mixin.rb
+  - lib/neo4j/extensions/aggregate/props_aggregate_mixin.rb
+  - lib/neo4j/extensions/aggregate/node_aggregate_mixin.rb
+  - lib/neo4j/extensions/aggregate/node_aggregator.rb
+  - lib/neo4j/extensions/aggregate/node_group.rb
+  - lib/neo4j/extensions/aggregate/aggregate_enum.rb
+  - lib/neo4j/extensions/aggregate/prop_group.rb
+  - lib/neo4j/extensions/aggregate/node_aggregate.rb
+  - lib/neo4j/extensions/aggregate/property_enum.rb
+  - lib/neo4j/extensions/aggregate/props_aggregate.rb
+  - lib/neo4j/extensions/aggregate/props_aggregator.rb
+  - lib/neo4j/extensions/graph_algo.rb
+  - lib/neo4j/extensions/rest_slave.rb
+  - lib/neo4j/extensions/rest/stubs.rb
+  - lib/neo4j/extensions/rest/server.rb
+  - lib/neo4j/extensions/rest/rest_mixin.rb
+  - lib/neo4j/extensions/rest/rest.rb
+  - lib/neo4j/extensions/rest_master.rb
+  - lib/neo4j/extensions/reindexer.rb
+  - lib/neo4j/extensions/find_path.rb
+  - lib/neo4j/extensions/aggregate.rb
+  - lib/neo4j/event_handler.rb
+  - lib/neo4j/reference_node.rb
+  - lib/neo4j/jars/geronimo-jta_1.1_spec-1.1.1.jar
+  - lib/neo4j/jars/neo4j-kernel-1.0.jar
+  - lib/neo4j/relationship.rb
+  - lib/neo4j/indexer.rb
+  - lib/lucene.rb
+  - lib/lucene/query_dsl.rb
+  - lib/lucene/jars.rb
+  - lib/lucene/transaction.rb
+  - lib/lucene/config.rb
+  - lib/lucene/index_searcher.rb
+  - lib/lucene/document.rb
+  - lib/lucene/field_info.rb
+  - lib/lucene/index_info.rb
+  - lib/lucene/index.rb
+  - lib/lucene/jars/lucene-core-2.9.1.jar
+  - lib/lucene/hits.rb
+  - lib/neo4j.rb
+  - test/spec_helper.rb
+  - test/replication/master_slave_spec.rb
+  - test/replication/replication_spec.rb
+  - test/replication/test_master.rb
+  - test/replication/test_slave.rb
+  - test/extensions/tx_tracker_spec.rb
+  - test/extensions/aggregate/props_aggregate_spec.rb
+  - test/extensions/aggregate/node_mixin_spec.rb
+  - test/extensions/aggregate/node_aggregate_spec.rb
+  - test/extensions/find_path_spec.rb
+  - test/extensions/graph_algo_spec.rb
+  - test/rest/rest_spec.rb
+  - test/rest/stub_spec.rb
+  - test/neo4j/spec_helper.rb
+  - test/neo4j/readme_spec.rb
+  - test/neo4j/has_n_spec.rb
+  - test/neo4j/transaction_spec.rb
+  - test/neo4j/cascade_delete_spec.rb
+  - test/neo4j/migration_spec.rb
+  - test/neo4j/node_mixin_spec.rb
+  - test/neo4j/has_one_spec.rb
+  - test/neo4j/relationship_spec.rb
+  - test/neo4j/relation_traverser_spec.rb
+  - test/neo4j/has_list_spec.rb
+  - test/neo4j/indexer_spec.rb
+  - test/neo4j/node_lucene_spec.rb
+  - test/neo4j/neo_spec.rb
+  - test/neo4j/relationship_mixin_spec.rb
+  - test/neo4j/batch_inserter_spec.rb
+  - test/neo4j/reindexer_spec.rb
+  - test/neo4j/value_object_spec.rb
+  - test/neo4j/node_traverser_spec.rb
+  - test/neo4j/person_spec.rb
+  - test/neo4j/order_spec.rb
+  - test/neo4j/property_spec.rb
+  - test/neo4j/node_spec.rb
+  - test/lucene/spec_helper.rb
+  - test/lucene/transaction_spec.rb
+  - test/lucene/query_dsl_spec.rb
+  - test/lucene/index_spec.rb
+  - test/lucene/index_info_spec.rb
+  - test/lucene/sort_spec.rb
+  - test/lucene/field_info_spec.rb
+  - test/lucene/document_spec.rb
+  - examples/filetree/features/step_definitions/add_steps.rb
+  - examples/filetree/features/treesizes.feature
+  - examples/filetree/features/support/env.rb
+  - examples/filetree/features/support/rspec_helper.rb
+  - examples/filetree/README.rdoc
+  - examples/filetree/batch.props
+  - examples/filetree/app.rb
+  - examples/active_model/validation.rb
+  - examples/active_model/serializers.rb
+  - examples/railway/railnet-app.rb
+  - examples/railway/README
+  - examples/railway/railnet-data.rb
+  - examples/you_might_know/all_simple_paths.rb
+  - examples/you_might_know/YouMightKnow.java
+  - examples/you_might_know/nodes.rb
+  - examples/you_might_know/you_might_know.rb
+  - examples/rest/example.rb
+  - examples/admin/Rakefile
+  - examples/admin/spec/admin_spec.rb
+  - examples/admin/views/index.erb
+  - examples/admin/admin.rb
+  - examples/admin/public/neo4j.css
+  - examples/admin/public/neo_admin.js
+  - examples/admin/public/jquery.js
+  - examples/imdb/2_index_db.rb
+  - examples/imdb/1_create_neo_db.rb
+  - examples/imdb/README
+  - examples/imdb/model.rb
+  - examples/imdb/install.sh
+  - examples/imdb/find_actors.rb
+has_rdoc: true
+homepage: http://github.com/andreasronge/neo4j/tree
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+  - --quiet
+  - --title
+  - Neo4j.rb
+  - --opname
+  - index.html
+  - --line-numbers
+  - --main
+  - README.rdoc
+  - --inline-source
+require_paths: 
+  - lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 1.8.4
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: neo4j
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 3
+summary: A graph database for JRuby
+test_files: []
+
